@@ -1,0 +1,346 @@
+*
+{
+    transition: color .0s, background-color .0s;
+}
+
+div.notification
+{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    top: -50px;
+    transition: top 1s cubic-bezier(.12,1,.73,.92);
+    user-select: none;
+    width: fit-content;
+    z-index: 1000;
+}
+
+div.notification.ativo
+{
+    top: 30px;
+    transition: top 1s cubic-bezier(.12,1,.73,.92);
+}
+
+div.notification > div:nth-child(1)
+{
+    align-items: center;
+    background-color: rgba(20, 50, 66, 0.9);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    justify-content: center;
+    width: 45px;
+}
+
+div.notification > div:nth-child(1) .svgFill
+{
+    margin-top: 3px;
+}
+
+div.notification > div:nth-child(2)
+{    
+    background-color: rgba(20, 50, 66, 0.9);
+    border-bottom-left-radius: 20px;
+    left: 44px;
+    padding: 10px 20px;
+    position: absolute;
+    width: fit-content;
+}
+
+div.notification > div:nth-child(2) > span
+{
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+div.notification > div:nth-child(1) .svgFill svg {
+    width: 100%;
+    height: 100%;
+    animation: swing 1s infinite ease-in-out;
+    transform-origin: top center;
+}
+  
+  @keyframes swing {
+    0% {
+      transform: rotate(30deg);
+    }
+    50% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(30deg);
+    }
+}
+
+main
+{
+    min-height: 85vh;
+}
+
+body
+{
+    background-color: var(--fundo);
+    box-sizing: border-box;
+    color: var(--h-texto);
+    margin: 0;
+    transition: scale .6s cubic-bezier(.24,.88,.79,.17);
+}
+
+main
+{
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    justify-content: space-evenly;
+}
+
+section
+{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+section > a
+{
+    text-decoration: none;
+}
+
+section > div,
+section > a > div
+{
+    align-items: center;
+    background-color: var(--fundo-branco);
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 1px var(--sombra);
+    color: var(--fonte);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    margin: 25px 0;
+    position: relative;
+    width: 100%;
+}
+
+section > div > img.designImg,
+section > a > div > img.designImg
+{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+}
+
+section > div > .add-info,
+section > a > div > .add-info
+{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-style: italic;
+    justify-content: space-between;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+section > div > .add-info > span:nth-child(2),
+section > a > div > .add-info > span:nth-child(2)
+{
+    text-align: end;
+}
+
+section > div > h1,
+section > a > div > h1
+{
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section > div > p,
+section > a > div > p
+{
+    text-align: center;
+    margin: 20px;
+}
+
+section > div > .conteudo p,
+section > a > div > p
+{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+section > div > img.linguagem,
+section > a > div > img.linguagem
+{
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 50px;
+    transition: scale .3s;
+}
+
+section > div > img.linguagem:hover,
+section > a > div > img.linguagem:hover
+{
+    scale: 120%;
+    transition: scale .3s;
+}
+
+section > .ver,
+section > a > .ver
+{
+    cursor: context-menu;
+}
+
+.conteudo
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.conteudo > p
+{
+    text-align: center;
+}
+
+.conteudo code
+{
+    align-items: center;
+    background-color: var(--fundo-header);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.conteudo code > span
+{
+    color: var(--h-texto);
+    font-size: 17px;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.conteudo code > pre
+{
+    background-color: #010713;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 5px 1px var(--sombra);
+    color: #2c7ad6;
+    overflow: auto;
+    padding: 5px;
+    width: 100%;
+}
+
+.conteudo code > pre >
+{
+    color: var(--fonte);
+}
+
+aside
+{
+    align-items: center;
+    background-color: var(--fundo-branco);
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 1px var(--sombra);
+    color: var(--fonte);
+    display: flex;
+    flex-direction: column;    
+    margin: 25px 0;
+    max-height: 400px;
+    width: 25%;
+}
+
+aside > h1
+{
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn
+{
+    background-color: var(--fundo-header);
+    border: none;
+    border-radius: 5px;
+    color: var(--texto-linha);
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn:hover
+{
+    background-color: var(--fundo-header-btn);
+    transition: .3s;
+}
+
+/* perfil */
+
+.perfil > img
+{
+    margin: 10px 0px;
+    width: 50%;
+}
+
+.perfil > a.editar
+{
+    align-self: flex-start;
+}
+
+.perfil > a.sair
+{
+    align-self: flex-end;
+}
+
+.perfil > a.excluir
+{
+    align-self: flex-start;
+}
+
+.formComponent
+{
+    align-items: center;
+    box-shadow: 0px 1px 5px 1px var(--sombra);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    margin: auto 0;
+    width: 300px;
+}
+
+.lista table
+{
+    width: 98%;
+}
+
+.lista tr
+{
+    height: 40px;
+}
+
+.lista table, .lista tr, .lista td, .lista th
+{
+    border-bottom: 1px solid var(--fundo-header);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.lista tr:hover
+{
+    background-color: var(--fundo-table);
+}

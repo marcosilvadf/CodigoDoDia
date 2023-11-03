@@ -1,0 +1,65 @@
+section div
+{
+    cursor: default;
+}
+
+h1
+{
+    color: var(--fonte);
+    width: 50%;
+}
+
+form
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+img.perfil
+{
+    width: 50%;
+}
+
+input,
+select,
+textarea
+{
+    background-color: var(--fundo-branco);
+    border: 1px solid var(--borda-input);
+    box-sizing: border-box;
+    color: var(--fonte);
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    resize: none;
+}
+
+input::placeholder,
+textarea::placeholder
+{
+    color: var(--fonte);
+}
+
+#conteudoImagem
+{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+#imagem
+{
+    visibility: hidden;
+}
+
+.enviar
+{
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 150px;
+}

@@ -1,0 +1,191 @@
+:root
+{
+    --fundo: white;
+    --texto-h1-p: #203A43;
+    --texto-cartao: white;
+    --card1: #FF0099;
+    --card2: #f18900;
+    --card3: #009ddb;
+    --cor-fundo-selecao: #00a6e7;
+    --cor-fundo-selecao-texto: white;
+}
+
+*
+{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: color .8s, background-color .8s;
+}
+
+body
+{
+    background-color: var(--fundo);
+    margin: 0px 100px;
+}
+
+header
+{
+    position: relative;
+}
+
+h1
+{
+    color: var(--texto-h1-p);
+}
+
+
+h1,
+h2,
+a
+{
+    text-transform: uppercase;
+}
+
+h2,
+p
+{
+    color: var(--texto-cartao);
+}
+
+h1
+{
+    font-size: 70px;
+}
+
+h2
+{
+    font-size: 30px;
+}
+
+p
+{
+    text-align: center;
+}
+
+a
+{
+    background-color: var(--texto-cartao);
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    color: #203A43;
+    font-weight: bold;
+    padding: 5px 40px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+a:hover
+{
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+    color: #203A43;
+    padding: 5px 40px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+::selection
+{
+    background-color: var(--cor-fundo-selecao);
+    color: var(--cor-fundo-selecao-texto);
+}
+
+#tema
+{
+    border: none;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+#tema > svg
+{
+    height: 20px;
+    width: 20px;
+}
+
+#cartoes
+{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cartao
+{
+    align-items: center;
+    background-color: rgba(32, 58, 67, 0.1);
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-evenly;
+    padding: 0px 20px;
+    width: 300px;
+}
+
+.cartao:nth-child(1)
+{
+    background-color: var(--card1);
+}
+
+.cartao:nth-child(2)
+{
+    background-color: var(--card2);
+}
+
+.cartao:nth-child(3)
+{
+    background-color: var(--card3);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+    h1
+    {
+        text-align: center;
+    }
+
+    #cartoes
+    {
+        flex-direction: column;
+    }
+
+    .cartao
+    {
+        margin: 20px 0px;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    body
+    {        
+        margin: 0;
+    }
+
+    h1
+    {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #cartoes
+    {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cartao
+    {
+        margin: 20px 0px;
+        width: 90%;
+    }
+}

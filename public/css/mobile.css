@@ -1,0 +1,121 @@
+@media screen and (max-width: 767px)
+{
+    /* notificação */
+    div.notification
+    {
+        align-items: center;
+        flex-direction: column;
+        top: -100px;
+    }
+
+    div.notification > div:nth-child(2)
+    {
+        left: 0;
+        position: relative;
+    }
+
+    /* cabecalho */
+    menu
+    {
+        position: relative;
+    }
+
+    menu ul
+    {
+        background-color: var(--fundo-menu);
+        border-radius: 5px;
+        flex-direction: column;
+        height: 0px;
+        overflow: hidden;
+        padding: 0 0;
+        position: absolute;
+        right: -10px;
+        z-index: 1000;
+    }
+    
+    menu ul li
+    {
+        color: var(--cor-fundo-selecao-texto);
+    }
+
+    menu > ul > img
+    {
+        height: 30px;
+        margin-left: 12px;
+        margin-top: 20px;
+        width: 30px;
+    }
+
+    menu ul.ativo
+    {
+        height: fit-content;
+        padding: 10px 0;
+    }
+
+    menu ul li.ativo
+    {        
+        color: var(--cor-fundo-selecao);
+        border: none;
+    }
+
+    #codigododia
+    {
+        text-align: center;
+        width: 100%;
+    }
+
+    #espaco-menu
+    {
+        display: none;
+    }
+
+    /* main */
+    main
+    {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section
+    {
+        width: 90%;
+    }
+
+    section > div > .add-info,
+    section > a > div > .add-info
+    {
+        flex-direction: column;
+    }
+
+    .conteudo > code > pre
+    {
+        width: 100%;
+    }
+
+    aside
+    {
+        display: none;
+    }
+
+    .formComponent
+    {
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    /* rodape */
+    footer > div:nth-child(1)
+    {
+        display: none;
+    }
+
+    footer > div:nth-child(2)
+    {
+        width: 50%;
+    }
+
+    footer > div:nth-child(3)
+    {
+        width: 50%;
+    }
+}
