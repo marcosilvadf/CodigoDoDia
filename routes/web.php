@@ -68,3 +68,9 @@ Route::group(['prefix' => 'usuario'], function () {
     Route::get('/recuperar', [App\Http\Controllers\UsuarioController::class, 'recuperar'])->name('usuario.recuperar');
     Route::post('/recuperar', [App\Http\Controllers\UsuarioController::class, 'mudarSenha'])->name('usuario.recuperar.post');
 });
+
+Route::group(['prefix' => 'api'], function () {
+    Route::get('/previsao/{nome}', [App\Http\Controllers\LiveController::class, 'previsao'])->name('live.previsao');
+    Route::get('/apelido/{nome}', [App\Http\Controllers\LiveController::class, 'apelido'])->name('live.apelido');
+    Route::get('/causa/{nome}', [App\Http\Controllers\LiveController::class, 'causa'])->name('live.causa');
+});
