@@ -73,4 +73,11 @@ Route::group(['prefix' => 'api'], function () {
     Route::get('/previsao/{nome}', [App\Http\Controllers\LiveController::class, 'previsao'])->name('live.previsao');
     Route::get('/apelido/{nome}', [App\Http\Controllers\LiveController::class, 'apelido'])->name('live.apelido');
     Route::get('/causa/{nome}', [App\Http\Controllers\LiveController::class, 'causa'])->name('live.causa');
+
+    Route::get('/barata/{args}', [App\Http\Controllers\LiveController::class, 'barata'])->name('live.barata');
+    Route::get('/respbarata/{msg}', [App\Http\Controllers\LiveController::class, 'respBarata'])->name('live.resp_barata');
+    Route::get('/barata', [App\Http\Controllers\LiveController::class, 'barataTutorial'])->name('live.barata_tutorial');
+    Route::get('/respbarata', [App\Http\Controllers\LiveController::class, 'respBarataTutorial'])->name('live.resp_barata_tutorial');
+
+
 });

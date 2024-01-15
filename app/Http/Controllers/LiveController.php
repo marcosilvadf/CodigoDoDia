@@ -173,4 +173,31 @@ class LiveController extends Controller
         
         return "@" . $request->nome . " foi de F por: " . $causas_de_morte_engracadas[rand(0, 47)];
     }
+
+    public function barata(Request $request) {
+        $nomes = explode(',', $request->args);
+        $nomes = array_map('trim', $nomes);
+        $nomes = array_filter($nomes);
+
+        if(count($nomes) == 0) {
+            return $this->barataTutorial();
+        }
+
+        $escolhido = $nomes[rand(0, count($nomes) - 1)];
+        return 'Toda vez que eu chego em casa, A barata da vizinha está na minha cama, Toda vez que eu chego em casa, A barata da vizinha está na minha cama, Diz aí ' . $escolhido . ' o que cê vai fazer?';
+    }
+
+    public function respBarata(Request $request) {
+        $mensagem = $request->msg;
+        $mensagem = str_replace('!', '', $mensagem);
+        return 'Ele vai ' . $mensagem . ' na barata dela, Ele vai ' . $mensagem . ' na barata dela, Ele vai ' . $mensagem . ' na barata dela, Ele vai ' . $mensagem . ' na barata dela!';
+    }
+
+    public function respBarataTutorial() {      
+        return 'Você esqueceu de digitar a mensagem!';
+    }
+
+    public function barataTutorial() {
+        return 'Para o comando funcionar, você deve escrever nome de pessoas ou usuários depois do comando separados por vírgulas!';
+    }
 }
